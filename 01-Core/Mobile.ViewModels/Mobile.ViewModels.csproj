@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{47998622-D2A8-4682-A4C9-138A4D4E270E}</ProjectGuid>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <UseMSBuildEngine>true</UseMSBuildEngine>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Mobile.ViewModels</RootNamespace>
+    <AssemblyName>Mobile.ViewModels</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Profile111</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\LoginViewModel.cs" />
+    <Compile Include="App.cs" />
+    <Compile Include="ViewModels\BaseViewModel.cs" />
+    <Compile Include="ViewModels\HomeViewModel.cs" />
+    <Compile Include="AppText.cs" />
+    <Compile Include="AppColors.cs" />
+    <Compile Include="Logger.cs" />
+    <Compile Include="AppSizes.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Splat">
+      <HintPath>..\..\packages\Splat.2.0.0\lib\netstandard1.1\Splat.dll</HintPath>
+    </Reference>
+    <Reference Include="Acr.UserDialogs">
+      <HintPath>..\..\packages\Acr.UserDialogs.6.5.1\lib\netstandard1.1\Acr.UserDialogs.dll</HintPath>
+    </Reference>
+    <Reference Include="Acr.UserDialogs.Interface">
+      <HintPath>..\..\packages\Acr.UserDialogs.6.5.1\lib\netstandard1.1\Acr.UserDialogs.Interface.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Primitives">
+      <HintPath>..\..\packages\System.ComponentModel.Primitives.4.3.0\lib\netstandard1.0\System.ComponentModel.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.TypeConverter">
+      <HintPath>..\..\packages\System.ComponentModel.TypeConverter.4.3.0\lib\netstandard1.0\System.ComponentModel.TypeConverter.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper">
+      <HintPath>..\..\packages\AutoMapper.6.1.1\lib\netstandard1.1\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Platform">
+      <HintPath>..\..\packages\MvvmCross.Platform.5.1.0\lib\portable-net45+win+wpa81+wp80\MvvmCross.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Core">
+      <HintPath>..\..\packages\MvvmCross.Core.5.1.0\lib\portable-net45+win+wpa81+wp80\MvvmCross.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Binding">
+      <HintPath>..\..\packages\MvvmCross.Binding.5.1.0\lib\portable-net45+win+wpa81+wp80\MvvmCross.Binding.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Localization">
+      <HintPath>..\..\packages\MvvmCross.Binding.5.1.0\lib\portable-net45+win+wpa81+wp80\MvvmCross.Localization.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.Color">
+      <HintPath>..\..\packages\MvvmCross.Plugin.Color.5.1.0\lib\portable-net45+win+wpa81+wp80\MvvmCross.Plugins.Color.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Mobile.Services.Realm\Mobile.Services.Realm.csproj">
+      <Project>{711CE704-A550-48F9-8C12-6565D1E540C6}</Project>
+      <Name>Mobile.Services.Realm</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Mobile.Core\Mobile.Core.csproj">
+      <Project>{0969D6C0-A3C3-4D2C-9D06-582E08BD1323}</Project>
+      <Name>Mobile.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+</Project>

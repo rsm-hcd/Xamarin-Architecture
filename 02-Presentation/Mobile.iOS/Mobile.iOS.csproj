@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProjectGuid>{D78D6F0F-E754-4726-990F-1C9265A74DFA}</ProjectGuid>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Mobile.iOS</RootNamespace>
+    <AssemblyName>Mobile.iOS</AssemblyName>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <DeviceSpecificBuild>true</DeviceSpecificBuild>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+    <MtouchFastDev>true</MtouchFastDev>
+    <IOSDebuggerPort>19475</IOSDebuggerPort>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>i386, x86_64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <DefineConstants></DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchFloat32>true</MtouchFloat32>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <DefineConstants></DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <DeviceSpecificBuild>true</DeviceSpecificBuild>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>i386, x86_64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <DeviceSpecificBuild>true</DeviceSpecificBuild>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+    <MtouchFastDev>true</MtouchFastDev>
+    <MtouchFloat32>true</MtouchFloat32>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="Microsoft.Practices.ServiceLocation">
+      <HintPath>..\..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetCross.Memory.Unsafe">
+      <HintPath>..\..\packages\DotNetCross.Memory.Unsafe.0.2.3.4\lib\netstandard1.0\DotNetCross.Memory.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="Remotion.Linq">
+      <HintPath>..\..\packages\Remotion.Linq.2.1.1\lib\portable-net45+win+wpa81+wp80\Remotion.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\packages\Newtonsoft.Json.10.0.2\lib\netstandard1.3\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Acr.Support.iOS">
+      <HintPath>..\..\packages\Acr.Support.2.1.0\lib\Xamarin.iOS10\Acr.Support.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="BTProgressHUD">
+      <HintPath>..\..\packages\BTProgressHUD.1.2.0.5\lib\Xamarin.iOS10\BTProgressHUD.dll</HintPath>
+    </Reference>
+    <Reference Include="Splat">
+      <HintPath>..\..\packages\Splat.2.0.0\lib\Xamarin.iOS10\Splat.dll</HintPath>
+    </Reference>
+    <Reference Include="Acr.UserDialogs">
+      <HintPath>..\..\packages\Acr.UserDialogs.6.5.1\lib\Xamarin.iOS10\Acr.UserDialogs.dll</HintPath>
+    </Reference>
+    <Reference Include="Acr.UserDialogs.Interface">
+      <HintPath>..\..\packages\Acr.UserDialogs.6.5.1\lib\Xamarin.iOS10\Acr.UserDialogs.Interface.dll</HintPath>
+    </Reference>
+    <Reference Include="XamSvg.Ios">
+      <HintPath>..\..\packages\Softlion.XamSvg.2.3.4.5\lib\Xamarin.iOS\XamSvg.Ios.dll</HintPath>
+    </Reference>
+    <Reference Include="XamSvg.Shared">
+      <HintPath>..\..\packages\Softlion.XamSvg.2.3.4.5\lib\Xamarin.iOS\XamSvg.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe">
+      <HintPath>..\..\packages\System.Runtime.CompilerServices.Unsafe.4.3.0\lib\netstandard1.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="Realm.DataBinding">
+      <HintPath>..\..\packages\Realm.DataBinding.1.1.0\lib\Xamarin.iOS10\Realm.DataBinding.dll</HintPath>
+    </Reference>
+    <Reference Include="Realm">
+      <HintPath>..\..\packages\Realm.Database.1.5.0\lib\netstandard1.4\Realm.dll</HintPath>
+    </Reference>
+    <Reference Include="Realm.Sync">
+      <HintPath>..\..\packages\Realm.1.5.0\lib\netstandard1.4\Realm.Sync.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Platform">
+      <HintPath>..\..\packages\MvvmCross.Platform.5.1.0\lib\Xamarin.iOS10\MvvmCross.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Platform.iOS">
+      <HintPath>..\..\packages\MvvmCross.Platform.5.1.0\lib\Xamarin.iOS10\MvvmCross.Platform.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Core">
+      <HintPath>..\..\packages\MvvmCross.Core.5.1.0\lib\Xamarin.iOS10\MvvmCross.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.iOS">
+      <HintPath>..\..\packages\MvvmCross.Core.5.1.0\lib\Xamarin.iOS10\MvvmCross.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Binding">
+      <HintPath>..\..\packages\MvvmCross.Binding.5.1.0\lib\Xamarin.iOS10\MvvmCross.Binding.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Binding.iOS">
+      <HintPath>..\..\packages\MvvmCross.Binding.5.1.0\lib\Xamarin.iOS10\MvvmCross.Binding.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Localization">
+      <HintPath>..\..\packages\MvvmCross.Binding.5.1.0\lib\Xamarin.iOS10\MvvmCross.Localization.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.Color">
+      <HintPath>..\..\packages\MvvmCross.Plugin.Color.5.1.0\lib\Xamarin.iOS10\MvvmCross.Plugins.Color.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.Color.iOS">
+      <HintPath>..\..\packages\MvvmCross.Plugin.Color.5.1.0\lib\Xamarin.iOS10\MvvmCross.Plugins.Color.iOS.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Contents.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+    <Folder Include="ViewControllers\" />
+    <Folder Include="Delegates\" />
+    <Folder Include="Images\" />
+    <Folder Include="TableSources\" />
+    <Folder Include="Utilities\" />
+    <Folder Include="Views\" />
+    <Folder Include="Storyboards\" />
+    <Folder Include="Mvx\" />
+    <Folder Include="Views\Cells\" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="Storyboards\LaunchScreen.storyboard" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Info.plist" />
+    <None Include="Entitlements.plist" />
+    <None Include="packages.config" />
+    <None Include="FodyWeavers.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="Delegates\AppDelegate.cs" />
+    <Compile Include="ViewControllers\Base\BaseViewController.cs" />
+    <Compile Include="ViewControllers\Base\BaseScrollViewController.cs" />
+    <Compile Include="Utilities\AppColors.cs" />
+    <Compile Include="Extensions\NSDateExtensions.cs" />
+    <Compile Include="Extensions\NSObjectExtensions.cs" />
+    <Compile Include="Extensions\ObjectExtensions.cs" />
+    <Compile Include="Extensions\UIExtensions.cs" />
+    <Compile Include="Extensions\ViewControllerExtensions.cs" />
+    <Compile Include="Utilities\ImagePickerHelper.cs" />
+    <Compile Include="Utilities\KeychainHelper.cs" />
+    <Compile Include="Utilities\ReachabilityHelper.cs" />
+    <Compile Include="Utilities\SurroundingSubviews.cs" />
+    <Compile Include="Utilities\UIUtilities.cs" />
+    <Compile Include="Delegates\ImagePickerDelegate.cs" />
+    <Compile Include="ViewControllers\LoginViewController.cs" />
+    <Compile Include="ViewControllers\LoginViewController.presenter.cs">
+      <DependentUpon>LoginViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\LoginViewController.layout.cs">
+      <DependentUpon>LoginViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mvx\DebugTrace.cs" />
+    <Compile Include="Mvx\LinkerPleaseInclude.cs" />
+    <Compile Include="Mvx\Setup.cs" />
+    <Compile Include="ViewControllers\HomeViewController.cs" />
+    <Compile Include="ViewControllers\HomeViewController.presenter.cs">
+      <DependentUpon>HomeViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\HomeViewController.layout.cs">
+      <DependentUpon>HomeViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bootstrap\ColorPluginBootstrap.cs" />
+    <Compile Include="TableSources\UsersTableSource.cs" />
+    <Compile Include="Views\Cells\UserCell.cs" />
+    <Compile Include="Views\Cells\UserCell.presenter.cs">
+      <DependentUpon>UserCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Cells\UserCell.layout.cs">
+      <DependentUpon>UserCell.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\01-Core\Mobile.Services.Realm\Mobile.Services.Realm.csproj">
+      <Project>{711CE704-A550-48F9-8C12-6565D1E540C6}</Project>
+      <Name>Mobile.Services.Realm</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Mobile.Svg\Mobile.Svg.csproj">
+      <Project>{CA869354-833D-4806-91AC-8CF59C172A86}</Project>
+      <Name>Mobile.Svg</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\01-Core\Mobile.Core\Mobile.Core.csproj">
+      <Project>{0969D6C0-A3C3-4D2C-9D06-582E08BD1323}</Project>
+      <Name>Mobile.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\01-Core\Mobile.ViewModels\Mobile.ViewModels.csproj">
+      <Project>{47998622-D2A8-4682-A4C9-138A4D4E270E}</Project>
+      <Name>Mobile.ViewModels</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <Import Project="..\..\packages\Realm.Database.1.4.0\build\Realm.Database.targets" Condition="Exists('..\..\packages\Realm.Database.1.4.0\build\Realm.Database.targets')" />
+  <Import Project="..\..\packages\Realm.1.4.0\build\Realm.targets" Condition="Exists('..\..\packages\Realm.1.4.0\build\Realm.targets')" />
+  <Import Project="..\..\packages\Fody.2.0.6\build\netstandard1.4\Fody.targets" Condition="Exists('..\..\packages\Fody.2.0.6\build\netstandard1.4\Fody.targets')" />
+  <Import Project="..\..\packages\Realm.Database.1.5.0\build\Realm.Database.targets" Condition="Exists('..\..\packages\Realm.Database.1.5.0\build\Realm.Database.targets')" />
+  <Import Project="..\..\packages\Realm.1.5.0\build\Realm.targets" Condition="Exists('..\..\packages\Realm.1.5.0\build\Realm.targets')" />
+</Project>

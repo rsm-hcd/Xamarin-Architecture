@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>{9C80C895-AC43-4C1D-8F83-BEDFAF6CA657}</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>Mobile.ViewModels.Tests.Shared</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Integration\ViewModelTestBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Integration\LoginViewModelTest.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Mocks\UserDialogsMock.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Mocks\DisposableMock.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Mocks\ProgressDialogMock.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Integration\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Mocks\" />
+  </ItemGroup>
+</Project>

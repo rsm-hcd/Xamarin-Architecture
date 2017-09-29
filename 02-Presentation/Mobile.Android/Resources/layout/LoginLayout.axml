@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    local:MvxBind="BackgroundColor NeutralColor, Converter=NativeColor">
+    <xamsvg.SvgImageView
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        local:svg="res:avatar"
+        android:id="@+id/profileImage" />
+    <EditText
+        android:inputType="textEmailAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/usernameField"
+        local:MvxBind="Text Username; Hint UsernamePlaceholderText; TextColor PrimaryColor, Converter=NativeColor" />
+    <EditText
+        android:inputType="textPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        local:MvxBind="Text Password; Hint PasswordPlaceholderText; TextColor PrimaryColor, Converter=NativeColor"
+        android:id="@+id/passwordField" />
+    <Button
+        android:text="Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        local:MvxBind="Text LoginButtonText; Click LoginCommand; BackgroundColor SecondaryColor, Converter=NativeColor; TextColor NeutralColor, Converter=NativeColor"
+        android:id="@+id/loginButton" />
+    <TextView
+        android:text="Text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        local:MvxBind="Text Message; TextColor PrimaryColor, Converter=NativeColor"
+        android:id="@+id/messageLabel" />
+</LinearLayout>

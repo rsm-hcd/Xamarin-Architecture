@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:text="Text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        local:MvxBind="Text TitleLabelText"
+        android:id="@+id/titleLabel" />
+    <TextView
+        android:text="Text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        local:MvxBind="Text FirstNameLabelText"
+        android:id="@+id/firstNameLabel" />
+    <TextView
+        android:text="Text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        local:MvxBind="Text User.FirstName"
+        android:id="@+id/firstNameValue" />
+    <TextView
+        android:text="Text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        local:MvxBind="Text LastNameLabelText"
+        android:id="@+id/lastNameLabel" />
+    <TextView
+        android:text="Text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        local:MvxBind="Text User.LastName"
+        android:id="@+id/lastNameValue" />  
+    <TextView
+        android:text="Text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        local:MvxBind="Text EmailLabelText"
+        android:id="@+id/emailLabel" />
+    <TextView
+        android:text="Text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        local:MvxBind="Text User.Email"
+        android:id="@+id/emailValue" />     
+</LinearLayout>
